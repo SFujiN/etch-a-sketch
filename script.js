@@ -10,3 +10,11 @@ function createGrid(n) {
 }
 
 createGrid(16);
+
+let grids = document.querySelectorAll('.square');
+grids.forEach(grid => {
+    grid.addEventListener('mouseover', (e) => {
+        grid.classList.add('black');
+        console.log(e.target);
+    });
+});
