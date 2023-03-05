@@ -5,11 +5,20 @@
     height: 500px;
 }
 
-.square {
+.square-16,
+.square-32 {
     box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.square-16 {
     width: 6.25%;
     height: 6.25%;
-    border: 1px solid black;
+}
+
+.square-32 {
+    width: 3.125%;
+    height: 3.125%;
 }
 
 .black {
