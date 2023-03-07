@@ -16,7 +16,6 @@ let grids = document.querySelectorAll('.square-16');
 grids.forEach(grid => {
     grid.addEventListener('mouseover', (e) => {
         grid.classList.add('black');
-        console.log(e.target);
     });
 });
 
