@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const resizeBtn = document.querySelector('#resize');
 
 function createGrid(n) {
     // create an n x n grid
@@ -17,4 +18,8 @@ grids.forEach(grid => {
         grid.classList.add('black');
         console.log(e.target);
     });
+});
+
+resizeBtn.addEventListener('click', () => {
+    console.log('click');
 });
