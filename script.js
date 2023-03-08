@@ -21,5 +21,6 @@ grids.forEach(grid => {
 
 resizeBtn.addEventListener('click', () => {
     prompt('Enter grid size: ');
+    delete grids;
     console.log('click');
 });
