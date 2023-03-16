@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const resizeBtn = document.querySelector('#resize');
 const SIDE = 960;
 
+// inspired by michalosman
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
