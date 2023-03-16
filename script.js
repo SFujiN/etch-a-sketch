@@ -1,7 +1,11 @@
 const container = document.querySelector('.container');
 const resizeBtn = document.querySelector('#resize');
-
 const SIDE = 960;
+
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 
 function createGrid(n) {
     // create an n x n grid
@@ -14,6 +18,11 @@ function createGrid(n) {
         square.style.height = dimensions + '%';
 
         square.addEventListener('mouseover', (e) => {
+            if (mouseDown) {
+                square.classList.add('black');
+            }
+        });
+        square.addEventListener('mousedown', (e) => {
             square.classList.add('black');
         });
         container.appendChild(square);
@@ -23,7 +32,13 @@ function createGrid(n) {
 createGrid(16);
 
 resizeBtn.addEventListener('click', () => {
-    let size = parseInt(prompt('Enter grid size: '));
+    let size;
+    do {
+        size = parseInt(prompt('Enter grid size: '));
+        if (size > 100) {
+            alert('Choose grid size less than 100');
+        }
+    } while(size > 100);
     let grids = document.querySelectorAll('.square');
     grids.forEach(grid => {
         container.removeChild(grid);
