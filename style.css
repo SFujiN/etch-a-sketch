@@ -5,20 +5,9 @@
     height: 960px;
 }
 
-.square-16,
-.square-32 {
+.square {
     box-sizing: border-box;
     border: 1px solid black;
-}
-
-.square-16 {
-    width: 6.25%;
-    height: 6.25%;
-}
-
-.square-32 {
-    width: 3.125%;
-    height: 3.125%;
 }
 
 .black {
